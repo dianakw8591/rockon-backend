@@ -1,7 +1,7 @@
 class CreateClimbs < ActiveRecord::Migration[6.0]
   def change
     create_table :climbs do |t|
-      t.references :area_id, null: false, foreign_key: true
+      t.references :area, null: false, foreign_key: true
       t.string :name
       t.string :location_str
       t.string :mtnproj_id

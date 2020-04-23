@@ -1,4 +1,4 @@
 class UserClimb < ApplicationRecord
-  belongs_to :climb_id
-  belongs_to :user_id
+  belongs_to :climb
+  belongs_to :user
 end
