@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_23_172041) do
+ActiveRecord::Schema.define(version: 2020_04_24_204954) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(version: 2020_04_23_172041) do
     t.string "location_str"
     t.string "mtnproj_id"
     t.integer "stars"
-    t.string "type"
+    t.string "key_type"
     t.string "full_type"
     t.string "rating"
     t.integer "numeric_rating"
@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(version: 2020_04_23_172041) do
     t.float "lat"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "area_array", default: [], array: true
     t.index ["area_id"], name: "index_climbs_on_area_id"
   end
 
