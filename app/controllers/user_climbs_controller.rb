@@ -1,2 +1,0 @@
-class UserClimbsController < ApplicationController
-end
