@@ -2,17 +2,13 @@ class Api::V1::UsersController < ApplicationController
   skip_before_action :authorized, only: [:create]
 
   def update
-    # user = User.find(params[:id])
-    # if ( !user_params[:location_id] || Location.find_by(id: user_params[:location_id]) )
-    #   user.update(user_params)
-    #   if user.valid?  
-    #     render json: { user: UserSerializer.new(user) }
-    #   else
-    #     render json: { error: user.errors.full_messages }, status: :not_acceptable
-    #   end
-    # else
-    #   render json: { error: 'Not a valid house id. Please try again'}
-    # end
+    user = User.find(params[:id])
+    user.update(user_params)
+    if user.valid?  
+      render json: { user: UserSerializer.new(user) }
+    else
+      render json: { error: user.errors.full_messages }, status: :not_acceptable
+    end
   end
 
   def destroy
