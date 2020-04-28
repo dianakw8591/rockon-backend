@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
-      resources :user_climbs
       resources :climbs
       resources :areas
-      resources :users
+      resources :users do
+        resources :user_climbs
+      end
       post '/login', to: 'auth#create'
       get '/current_user', to: 'auth#show'
     end
