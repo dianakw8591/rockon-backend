@@ -10,6 +10,12 @@ class Api::V1::UserClimbsController < ApplicationController
     render json: entry
   end
 
+  def destroy
+    entry = UserClimb.find(params[:id])
+    entry.destroy
+    render json: {message: "Entry successfully deleted"} 
+  end
+
   private
 
   def entry_params

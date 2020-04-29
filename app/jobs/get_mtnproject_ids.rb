@@ -1,16 +1,5 @@
 require 'open-uri'
 
-# def getIds(areaId, parentId)
-#   create area with areaId, name, parentId
-#   if noMoreAreas
-#     go through routes, get route ids, create new routes with areaId
-#   else
-#     get all subarea ids .foreach => getIds(id, areaId)
-#   end
-
-# end
-
-
 def getIds(areaId, parentId)
   base_url = 'https://www.mountainproject.com/area/'
   url = base_url + areaId
