@@ -4,4 +4,11 @@ class Area < ApplicationRecord
   has_many :climbs
 
   validates :mtnproj_id, uniqueness: true
+
+
+  def all_child_routes
+    routes = children.map { |area| area.all_child_routes }
+    routes << climbs
+    routes.flatten
+  end
 end
