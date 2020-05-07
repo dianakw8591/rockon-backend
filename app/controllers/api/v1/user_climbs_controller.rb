@@ -10,6 +10,16 @@ class Api::V1::UserClimbsController < ApplicationController
     render json: entry
   end
 
+  def update
+    entry = UserClimb.find(params[:id])
+    entry.update(entry_params)
+    if entry.valid?  
+      render json: entry
+    else
+      render json: { error: entry.errors.full_messages }, status: :not_acceptable
+    end
+  end
+
   def destroy
     entry = UserClimb.find(params[:id])
     entry.destroy
