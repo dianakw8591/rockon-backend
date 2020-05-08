@@ -25,6 +25,9 @@ end
 # getIds('107751068', nil)
 
 #ynp
-getIds('105833381', nil)
+# getIds('105833381', nil)
+
+#California
+getIds('105708959', nil)
 
 # command to run this file with rails: rails runner app/jobs/get_mtnproject_ids.rb   

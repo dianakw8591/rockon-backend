@@ -109,8 +109,7 @@ def convert_rating_v(str)
 end
 
 def get_id_array
-  climbs = Climb.all.map { |climb| climb.mtnproj_id }
-  climbs.slice(10,10)
+  Climb.all.map { |climb| climb.mtnproj_id }
 end
 
 def make_strs(array)
@@ -144,10 +143,7 @@ def call_mtnproject_api(array)
   end
 end
 
-missing = ["108178106,111866548,113976423,112416386,112416377,112416308,112416298,112912680,118564988,112419830"]
-
-
-call_mtnproject_api(missing)
+call_mtnproject_api(make_strs(get_id_array))
 
 # Returns details for up to 200 routes.
 # Required Arguments:
