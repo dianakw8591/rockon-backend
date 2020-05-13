@@ -109,7 +109,8 @@ def convert_rating_v(str)
 end
 
 def get_id_array
-  Climb.all.map { |climb| climb.mtnproj_id }
+  # Climb.all.map { |climb| climb.mtnproj_id }
+  Climb.where(name: nil).map { |climb| climb.mtnproj_id }
 end
 
 def make_strs(array)

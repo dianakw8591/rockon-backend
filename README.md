@@ -32,6 +32,8 @@ Ruby 2.7.1
   ```
   rails runner app/jobs/call_mtnproject_api.rb
   ```
+  You will also need to set up your own configuration for a secret to use when encrypting JSON web tokens. Create and configure your secret, then replace `Rails.application.secret_key_base` at lines 5 and 18 in `/app/controllers/application_controller.rb` with your secret.
+  
   Run 'rails s' to start a local server:
   ```
   rails s
