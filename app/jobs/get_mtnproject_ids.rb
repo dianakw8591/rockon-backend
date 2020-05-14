@@ -86,32 +86,31 @@ end
 #Kentuck-michigan
 # ['105868674', '116720343', '105948977', '106029417', '105908062', '106113246'].map { |id| getIds(id, nil)}
 
-#Minnesota - Nevada DO THIS ONE NEXT
-['105812481', '108307056', '105899020', '105907492', '116096758', '105708961'].map { |id| getIds(id, nil)}
+#Minnesota - Nevada
+# ['105812481', '108307056', '105899020', '105907492', '116096758', '105708961'].map { |id| getIds(id, nil)}
 
 #NH - NM
 # ['105872225', '106374428', '105708964'].map { |id| getIds(id, nil)}
 
 #NY to Oklahoma
-# ['105800424', '105873282', '106598130', '105994953', '105854466']
+# ['105800424', '105873282', '106598130', '105994953', '105854466'].map { |id| getIds(id, nil)}
 
 #OR to SD
-# ['105708965', '105913279', '106842810', '107638915', '105708963']
+# ['105708965', '105913279', '106842810', '107638915', '105708963'].map { |id| getIds(id, nil)}
 
 #TN, TX
-# ['105887760', '105835804']
+# ['105887760', '105835804'].map { |id| getIds(id, nil)}
 
-#UT
-# getIds('105708957', nil)
+#UT - Wv
+# ['105708957', '105891603', '105852400', '105708966','105855459'].map { |id| getIds(id, nil)}
 
-#VT to WA
-# ['105891603', '105852400', '105708966']
-
-#west virginia - WY
-# ['105855459', '105708968', '105708960']
+#WI, WY
+# ['105708968', '105708960'].map { |id| getIds(id, nil)}
 
 #intl (done)
 # getIds('105907743', nil)
 
-# getIds(id, nil)
+#stuck in WV new river gorge
+getIds('105855459', nil)
+
 # command to run this file with rails: rails runner app/jobs/get_mtnproject_ids.rb   
