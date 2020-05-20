@@ -1,6 +1,8 @@
 # RockOn backend API
 
-RockOn is a digital logbook for tracking climbing ascents and attempts. The backend API uses Ruby on Rails with a Postgresql database. The frontend repo can be found [here](https://github.com/dianakw8591/rockon-client).
+RockOn is a digital logbook for tracking climbing ascents and attempts. The backend API uses Ruby on Rails with a PostgreSQL database. The frontend repo can be found [here](https://github.com/dianakw8591/rockon-client).
+
+View the demo [here](https://www.youtube.com/watch?v=WjnEPfqLNiI) or visit [rockonapp.com](http://rockonapp.com).
 
 ## Version
 
@@ -12,7 +14,7 @@ Ruby 2.7.1
   ```
   bundle install
   ```
-  To create the database, install Postgresql and run 'rails db:create'
+  To create the database, install PostgreSQL and run 'rails db:create'
   ```
   rails db:create
   ```
